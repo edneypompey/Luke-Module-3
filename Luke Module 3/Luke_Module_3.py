@@ -46,3 +46,28 @@ if tax < 0: # if tax is less than 0 not tax to be paid.
 
 tax = round(tax, 0)
 print("The tax is:", tax, "thalers")
+
+####3.1.1.12
+
+#Since the introduction of the Gregorian calendar (in 1582), 
+#the following rule is used to determine the kind of year:
+#if the year number isn't divisible by four, it's a common year;
+#otherwise, if the year number isn't divisible by 100, it's a leap year;
+#otherwise, if the year number isn't divisible by 400, it's a common year;
+#otherwise, it's a leap year.
+#It would be good to verify if the entered year falls into the Gregorian era, 
+#and output a warning otherwise: Not within the Gregorian calendar period.
+
+year = int(input("Enter a year: "))
+
+if year < 1582: #if less than 1582 then its is not within the Gregorian era and does not count
+    print("Not within the Gregorian calendar period")
+elif year % 4 != 0: #if the number cannot be divided by 4 then it will not be equal to 0. Its a common year.
+    print("Common year")
+elif year % 100 != 0: #if the number cannot be divided by 100 then it will not be equal to 0. Its a common year.
+    print("Leap year")
+elif year % 400 != 0: #if the number cannot be divided by 400 then it will not be equal to 0. Its a common year.
+    print("Common year")
+else:
+    print("Leap year") #if it doesnt match the above then it must be a leap year.
+    
