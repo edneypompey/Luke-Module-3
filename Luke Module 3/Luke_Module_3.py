@@ -190,3 +190,21 @@ for letter in userword:
         #add letters from user input into the empty variable, execpt the vowels
             
 print(wordWithoutVowels)
+
+#######3.2.1.14
+
+#Your task is to write a program which reads the number of blocks the builders have, 
+#and outputs the height of the pyramid that can be built using these blocks.
+
+##### I DO NOT UNDERSTAND WHATS HAPPENING HERE######
+
+blocks = int(input("Enter the number of blocks: "))
+
+height = 0 #create height variable
+layer = 1 #create layer variable
+while layer <= blocks: 
+    height += 1
+    blocks -= layer
+    layer += 1
+
+print("The height of the pyramid:", height)
