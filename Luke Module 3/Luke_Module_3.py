@@ -119,7 +119,9 @@ print("Ready or not, here I come!") #once for loop has completed run this string
 # in which case the message "You've successfully left the loop." 
 #should be printed to the screen, and the loop should terminate.
 
-while True: ##### I DO NOT UNDERSTAND WHATS HAPPENING HERE######
+##### I DO NOT UNDERSTAND WHATS HAPPENING HERE###### MODEL SOLUTION BELOW ########
+
+while True:
     word = input("Enter 'chupacabra' leave the loop: ")
     if word == "chupacabra": #if the word input by the user is true then break imediately
         break 
@@ -196,7 +198,7 @@ print(wordWithoutVowels)
 #Your task is to write a program which reads the number of blocks the builders have, 
 #and outputs the height of the pyramid that can be built using these blocks.
 
-##### I DO NOT UNDERSTAND WHATS HAPPENING HERE######
+##### I DO NOT UNDERSTAND WHATS HAPPENING HERE###### MODEL SOLUTION BELOW ########
 
 blocks = int(input("Enter the number of blocks: "))
 
@@ -208,3 +210,23 @@ while layer <= blocks:
     layer += 1
 
 print("The height of the pyramid:", height)
+
+#####3.2.1.15
+
+### DID NOT UNDERSTAND THE QUESTION ###### MODEL SOLUTION BELOW ########
+
+c0 = int(input("Enter c0: ")) 
+
+if c0 > 1:
+	steps = 0
+	while c0 != 1:
+		if c0 %2 != 0:
+			cnew = 3 * c0 + 1
+		else:
+			cnew = c0 // 2
+		print(c0)
+		c0 = cnew
+		steps += 1
+	print("steps =",steps)
+else:
+	print("Bad c0 value")
