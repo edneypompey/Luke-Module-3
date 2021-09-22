@@ -63,11 +63,41 @@ year = int(input("Enter a year: "))
 if year < 1582: #if less than 1582 then its is not within the Gregorian era and does not count
     print("Not within the Gregorian calendar period")
 elif year % 4 != 0: #if the number cannot be divided by 4 then it will not be equal to 0. Its a common year.
-    print("Common year")
+      print("Common year")
 elif year % 100 != 0: #if the number cannot be divided by 100 then it will not be equal to 0. Its a common year.
-    print("Leap year")
+        print("Leap year")
 elif year % 400 != 0: #if the number cannot be divided by 400 then it will not be equal to 0. Its a common year.
     print("Common year")
 else:
     print("Leap year") #if it doesnt match the above then it must be a leap year.
-    
+  
+#### Weds 22 Sep   
+
+##### 3.2.1.3
+
+#complete the code in the editor in such a way so that the code
+#will ask the user to enter an integer number
+#will use a while loop
+#will check whether the number entered by the user is the same as the number picked by the magician
+# if not prompt "Ha ha! You're stuck in my loop!"secret_number = 777
+#if its correct prompt "Well done, muggle! You are free now."
+
+secret_number = 777
+
+print(
+"""
++================================+
+| Welcome to my game, muggle!    |
+| Enter an integer number        |
+| and guess what number I've     |
+| picked for you.                |
+| So, what is the secret number? |
++================================+
+""")
+
+user_guess =int(input("Enter a number: "))#create int variable from user input
+
+while user_guess != secret_number: # while number is not the same as 777 print next line
+    print("Ha ha! You're stuck in my loop!") # print this each time
+    user_guess =int(input("Enter a diferent number: ")) # then prompt to ask a new number
+    print("Well done, muggle! You are free now.") # when the while statement is false (eg = 777 print this)
