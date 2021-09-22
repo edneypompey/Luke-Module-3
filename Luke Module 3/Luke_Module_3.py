@@ -101,3 +101,54 @@ while user_guess != secret_number: # while number is not the same as 777 print n
     print("Ha ha! You're stuck in my loop!") # print this each time
     user_guess =int(input("Enter a diferent number: ")) # then prompt to ask a new number
     print("Well done, muggle! You are free now.") # when the while statement is false (eg = 777 print this)
+
+##### 3.2.1.6
+
+import time
+
+for timer in range(1, 6): #for loop that counts from one to five.
+    print(timer," Mississippi") #prints the timer variable and missippi in increments of 1.
+    time.sleep(1) #sleep for 1 second, then go back to the for statement4
+
+print("Ready or not, here I come!") #once for loop has completed run this string
+
+#####3.2.1.9
+
+#Design a program that uses a while loop and continuously asks the user to enter
+#a word unless the user enters "chupacabra" as the secret exit word
+# in which case the message "You've successfully left the loop." 
+#should be printed to the screen, and the loop should terminate.
+
+while True: ##### I DO NOT UNDERSTAND WHATS HAPPENING HERE######
+    word = input("Enter 'chupacabra' leave the loop: ")
+    if word == "chupacabra": #if the word input by the user is true then break imediately
+        break 
+print("You've successfully left the loop!") #Print once exiting the loop
+
+#####3.2.1.10
+
+#you must design a vowel eater! Write a program that uses:
+#a for loop;the concept of conditional execution (if-elif-else)
+#the continue statement.
+#Your program must: ask the user to enter a word;
+#use user_word = user_word.upper() to convert the word entered by the user to upper case;
+#use conditional execution and the continue statement to "eat" the following 
+#vowels A, E, I, O, U from the inputted word;
+#print the uneaten letters to the screen, each one of them on a separate lin
+
+userword =input("Enter a word: ") #Prompt the user to enter a word
+userword = userword.upper() #change the variable into uppercase
+
+for letter in userword:
+        if letter == "A": #if word includes A do nothing and continue
+            continue
+        elif letter == "E": #if word includes E do nothing and continue
+             continue
+        elif letter == "I": #if word includes I do nothing and continue
+             continue
+        elif letter == "O": #if word includes O do nothing and continue
+             continue
+        elif letter == "U": #if word includes U do nothing and continue
+            continue
+        else:
+            print(letter) #print all other letters
