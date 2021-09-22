@@ -152,3 +152,41 @@ for letter in userword:
             continue
         else:
             print(letter) #print all other letters
+
+###3.2.1.11
+
+#you must redesign the (ugly) vowel eater from the previous lab
+#Write a program that uses:
+#a for loop;
+#the concept of conditional execution (if-elif-else)
+#the continue statement
+
+#Your program must:
+#ask the user to enter a word;
+#use user_word = user_word.upper()
+#use conditional execution and the continue statement to "eat" the following vowels 
+#A, E, I, O, U from the inputted word;
+#assign the uneaten letters to the word_without_vowels variable
+#and print the variable to the screen.
+
+wordWithoutVowels = "" #an empty string
+
+userword =input("Enter a word: ") #Prompt the user to enter a word
+userword = userword.upper() #change the variable into uppercase
+
+for letter in userword:
+        if letter == "A": #if word includes A do nothing and continue
+            continue
+        elif letter == "E": #if word includes E do nothing and continue
+             continue
+        elif letter == "I": #if word includes I do nothing and continue
+             continue
+        elif letter == "O": #if word includes O do nothing and continue
+             continue
+        elif letter == "U": #if word includes U do nothing and continue
+            continue
+        else:
+            wordWithoutVowels = wordWithoutVowels + letter 
+        #add letters from user input into the empty variable, execpt the vowels
+            
+print(wordWithoutVowels)
