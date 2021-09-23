@@ -278,3 +278,26 @@ print("Step 4:", beatles)
 #step 5: use the insert() method to add Ringo Starr to the beginning of the list.
 beatles.insert(0, 'Ringo Starr') # add the strinf Ringo Starr into index 0
 print("Step 5:", beatles)
+
+####3.6.1.9
+
+#write a program which removes all the number repetitions from the list. 
+#have a list in which all the numbers appear not more than once.
+#you can improve the code and add a part that can carry out a conversation with the user 
+#and obtain all the data from her/him.
+
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9] #original list
+
+new_list = my_list[:] #make a copy of my_list
+new_list.sort() # sort the list to make it esy for the user to understand
+print(new_list) # show list to the user
+remove_value = int(input("Are there any duplicate numbers? If so type the number below: ")) #prompt user for duplicate values
+print("removing ",remove_value)#print value to be removed and the list for user
+
+for i in new_list: # loop that when the user value is in the new_list, remove it 
+    new_list.remove(remove_value) #remove the value input by the user
+    print(new_list) # re-print list for user and get them to try another dupicate
+    remove_value = int(input("Any more, If so type the number below or type 007: ")) #re-prompt the user
+    print("removing ",remove_value)#print value to be removed and the list for user
+else:
+    print("Well done , this is the  list with unique elements only:\n", new_list) #conratulate the user
