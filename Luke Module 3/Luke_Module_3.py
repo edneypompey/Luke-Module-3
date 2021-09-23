@@ -1,4 +1,6 @@
-###### Luke Edney Tues 21 Sep 
+###### Luke Edney SIMR 20 001 - Last updated Thurs 23rd Sep 2021 - go to line 236 for latest work
+
+###Tues 21 Sep 
 
 ###### 3.1.1.4
 #write a simple two-line program that takes the parameter n as input, which is an integer, 
@@ -209,7 +211,7 @@ while layer <= blocks:
     blocks -= layer
     layer += 1
 
-print("The height of the pyramid:", height)
+print("The height of the pyramid:", height) #when the while loop has ceased print this
 
 #####3.2.1.15
 
@@ -220,7 +222,7 @@ c0 = int(input("Enter c0: "))
 if c0 > 1:
 	steps = 0
 	while c0 != 1:
-		if c0 %2 != 0:
+		if c0 %2 != 0: #test if the number is even, where c0 is the variable.
 			cnew = 3 * c0 + 1
 		else:
 			cnew = c0 // 2
@@ -230,3 +232,21 @@ if c0 > 1:
 	print("steps =",steps)
 else:
 	print("Bad c0 value")
+
+##### Thurs 23rd Sep
+
+##### 3.4.1.6 the basics of lists
+
+# Step 1: write a line of code that prompts the user
+# to replace the middle number with an integer number entered by the user.
+# Step 2: write a line of code that removes the last element from the list.
+# Step 3: write a line of code that prints the length of the existing list.
+
+hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in the hat.
+
+user_input = int(input("Please enter a number: ")) # prompts user to enter a number
+hat_list[2] = user_input # Copying value of the user input into indxex 2 (middle value)
+
+del hat_list[4] # Removing index 4 element from the list.
+
+print("List Length: ", len(hat_list)) #print the length of the lists' elements.
