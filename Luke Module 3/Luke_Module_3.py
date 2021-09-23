@@ -266,11 +266,13 @@ print("Step 2:", beatles)
 
 # step 3: use the for loop and the append() method to prompt the user 
 # to add the following members of the band to the list: Stu Sutcliffe, and Pete Best
-
-##### DID NOT UNDERSTAND HOW TO DO STEP 3, (struggled with the 'for loop' user input)
+for new_member in range(2): #create variable new_member and loop it 2 times before exiting loop
+    user_new_member = input("Enter another member: ") #prompt user to enter a new name and assign it to the variable user_new_variable
+    beatles.append(user_new_member) # appends the user input to the end of the the list
+print("Step 3:", beatles)
 
 # step 4: use the del instruction to remove Stu Sutcliffe and Pete Best from the list;
-del beatles[1]  # Removing Paul from the list (as couldnt append stu via for loop)
+del beatles[3]  # Removing Stu Sutcliffe from the list.
 print("Step 4:", beatles)
 
 #step 5: use the insert() method to add Ringo Starr to the beginning of the list.
