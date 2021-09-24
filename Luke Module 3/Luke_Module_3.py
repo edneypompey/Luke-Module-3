@@ -1,4 +1,4 @@
-###### Luke Edney SIMR 20 001 - Last updated Thurs 23rd Sep 2021 - go to line 236 for latest work
+###### Luke Edney SIMR 20 001 - Last updated Fri 2th Sep 2021 - go to line 305 for latest work
 
 ###Tues 21 Sep 
 
@@ -301,3 +301,31 @@ for i in new_list: # loop that when the user value is in the new_list, remove it
     print("removing ",remove_value)#print value to be removed and the list for user
 else:
     print("Well done , this is the  list with unique elements only:\n", new_list) #conratulate the user
+
+#------------------------------------------------FRI 24TH ----------------------
+#TIC TAC TOE BOARD
+
+#using lists within lists, create a means of storage for a TTT tic tac toe game, noughts and crosses
+#the TTT board is 3 rows and 3 columns
+
+tttBoard = [["_", "_", "_"],# A three-column/three-row table - a two dimensional array (3x3). each element contains "_"
+           ["_", "_", "_"],
+           ["_", "_", "_"]]
+
+print(tttBoard[0])      #output first list to the screen
+print(tttBoard[1])      #output second list to the screen
+print(tttBoard[2],"\n") #output third list to the screen
+
+tttBoard[1][1] = "o" # changes one of the 9 spaces to a "o"
+
+print(tttBoard[0])  #re-print of the board
+print(tttBoard[1]) 
+print(tttBoard[2],"\n") 
+
+#Extension Exercise
+#If you are feeling like a ninja, 
+#Create a suitable loop which will be known as the "Game Loop"
+#At the start of each iteration, the board will be printed to the screen
+#Then, take the following inputs from the user during each iteration: column, row, o or x
+#This should allow a simple verion of the game
+ 
