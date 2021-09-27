@@ -305,27 +305,43 @@ else:
 #------------------------------------------------FRI 24TH ----------------------
 #TIC TAC TOE BOARD
 
-#using lists within lists, create a means of storage for a TTT tic tac toe game, noughts and crosses
-#the TTT board is 3 rows and 3 columns
-
 tttBoard = [["_", "_", "_"],# A three-column/three-row table - a two dimensional array (3x3). each element contains "_"
            ["_", "_", "_"],
            ["_", "_", "_"]]
 
+#tttBoard[1][1] = "o" # changes one of the 9 spaces to a "o"
+
+#tttBoard[0][1] = "0"
+#tttBoard[0][2] = "0"
+#tttBoard[1][0] = "0"
+#tttBoard[1][1] = "0"
+#tttBoard[1][2] = "0"
+#tttBoard[2][0] = "0"
+#tttBoard[2][1] = "0"
+#tttBoard[2][2] = "0"
+
+print("TIC TAC TOE \n")
 print(tttBoard[0])      #output first list to the screen
 print(tttBoard[1])      #output second list to the screen
 print(tttBoard[2],"\n") #output third list to the screen
 
-tttBoard[1][1] = "o" # changes one of the 9 spaces to a "o"
 
-print(tttBoard[0])  #re-print of the board
-print(tttBoard[1]) 
-print(tttBoard[2],"\n") 
 
-#Extension Exercise
-#If you are feeling like a ninja, 
-#Create a suitable loop which will be known as the "Game Loop"
-#At the start of each iteration, the board will be printed to the screen
-#Then, take the following inputs from the user during each iteration: column, row, o or x
-#This should allow a simple verion of the game
- 
+for i in range(9): 
+    i = int(input("Player 1, please enter a position for your go, 1-9: "))     #ask the user where to place they're piece
+    if i in Position_list:                                                           # will come back true if 5 is in the list, false if not
+        tttBoard[i] = i
+        
+        
+        #tttBoard[0][0] = "o" #then change that position to "o"
+   # print("TIC TAC TOE\n", tttBoard[0], "\n", tttBoard[1], "\n", tttBoard[2],"\n", sep='') # re-print the board
+
+#i in tttBoard # will come back true if 5 is in the list, false if not
+   
+    #elif i == position2:
+        #tttBoard[0][1] = "o" # chages position 2
+#print("TIC TAC TOE\n", tttBoard[0], "\n", tttBoard[1], "\n", tttBoard[2],"\n", sep='') # re-print the board
+
+# make each alterative turn a "o" or "x"
+
+#check if there are three in a row, if true thensomebody wins.
